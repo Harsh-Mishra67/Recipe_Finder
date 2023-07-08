@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+:root {
+    --light-color: #fff;
+    --dark-color: #282828;
+    --search-height: 50px;
+    --header-height: 70px;/*--search-height: 50px this is the correction;*/
+    --border-color: #ccc;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--light-color);
+    overflow: hidden;
+  }
+  .container {
+    text-align: center;
+    height: calc(100vh -var(--header-height));
+  }
+
+  header {
+    height: var(--header-height);
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--light-color);
+    gap: 10px;
+    padding-right: 30px;
+  }
+  header img {
+    filter: invert(1);
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--search-height);
+    gap: 10px;
+    box-shadow: 0px 2px 8px 0px var(--border-color);
+  }
+  .search input[type="text"] {
+    padding: 8px 10px;
+    line-height: 1.5;
+    font-size: 1rem;
+    border: none;
+    border-left: 1px solid var(--border-color);/*(-- --border-color) this is the correction*/
+    border-bottom: 1px solid transparent;
+    outline: none;
+    transition: all 200ms ease-in-out;
+    width: 60%;
+  }
+  .search input[type="text"]:focus {
+    border-left-color: transparent;
+    border-bottom-color: var(--border-color);
+    width: 61%;
+  }
+  .btn {
+    padding: 8px 10px;
+    background: transparent;
+    border-radius: 2px;
+    user-select: none;
+    font-size: 1rem;
+    border: 1px solid #007bff;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: #007bff;
+    border-color: var(--dark-color);
+    color: var(--light-color);
+  }
+  #Recipe-Conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: calc(100vh - (var(--header-height) + var(--search-height)));
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  .Recipe {
+    height: 300px;
+    width: 300px;
+    padding: 8px;
+    box-shadow: 0px 0px 8px 2px var(--border-color);
+    margin: 20px;
+    transition: all 200ms ease-in-out;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .Recipe-Title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .Recipe-Image {
+    height: 210px;
+  }
+  .Recipe-Image img {
+    height: 100%;
+    width: 100%;
+  }
+  .Recipe-Text {
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    background: #ccc;
+    margin-top: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: scale(0.8);
+    transform-origin: top left;
+  }
+  .Recipe-Text ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: left;
+    padding: 5px;
+  }
+  .Recipe-Text ul > li {
+    padding: 5px;
+  }
+  .Recipe:hover .Recipe-Text {
+    height: 120px;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  .Recipe:hover {
+    height: 420px;
+  }
+  ::selection{
+    color: var(--light-color);
+    background:rgb(126, 15, 115);
+  }
+  /* #loading {
+    background-image: url(https://giphy.com/gifs/billmillerbarbq-mac-and-cheese-macaroni-macncheese-kedLey4q4XCSfnCgGZ) no-repeat center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  } */
+  @media only screen and (max-width: 700px) {
+    body {
+      background: rgb(240, 239, 219);
+    }
+    .Recipe{
+      background: var(--light-color);
+      box-shadow: 0px 0px 10px 2px var(--dark-color);
+      width: 350px;
+    }
+    input[type="type"]{
+      background: transparent;
+      color: var(--light-color);
+    }
+    .btn{
+      background: transparent;
+      color: var(--dark-color);
+    }
+  } 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ccc;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #817171;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black;
+  }
