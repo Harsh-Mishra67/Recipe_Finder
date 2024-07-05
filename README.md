@@ -1,10 +1,5 @@
-# NexBlog
-Welcome to NEXBLOG, a comprehensive blogging platform designed to offer a seamless and engaging user experience across all devices. The platform allows users to create, read, update, and delete their own blog posts effortlessly. To enhance user engagement, blog posts can be categorized, enabling users to filter content based on their interests.
-
-NEXBLOG features a robust commenting system where users can interact by commenting on posts. Each user retains the ability to delete their own comments, ensuring a secure and organized interaction environment. The platform boasts strong security features for smooth signup, login, and logout processes, safeguarding user information and providing peace of mind.
-
-With a responsive design, NEXBLOG is optimized for smartphones, tablets, and computers, ensuring a great experience on any device. Additionally, we've integrated a 'Contact Me' feature, allowing users to provide direct feedback and suggestions, which helps in the continuous improvement of the platform.
-
+# Recipe Finder 
+Recipe Finder is a web application that allows users to search for their favourite recipes. It utilizes the Edamam API to fetch a wide range of recipes based on user input. The application provides a simple and intuitive user interface, making it easy for users to search and explore various recipes.
 ## Project deployed at
 <a href="https://harsh-mishra67.github.io/Recipe_Finder/">Recipe Finder</a>
 ## Features
